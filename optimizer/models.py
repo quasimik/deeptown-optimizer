@@ -12,6 +12,6 @@ class Recipe(models.Model):
 	time_sec = models.IntegerField()
 
 class Ingredient(models.Model):
-	resource = models.ForeignKey(Resource, on_delete='CASCADE', related_name='ingredients')
-	recipe = models.ForeignKey(Recipe, on_delete='CASCADE', related_name='ingredients')
+	resource = models.ForeignKey(Resource, on_delete='CASCADE')
+	recipe = models.ForeignKey(Recipe, on_delete='CASCADE')
 	qty = models.IntegerField()
